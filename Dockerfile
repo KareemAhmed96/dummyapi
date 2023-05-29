@@ -14,6 +14,6 @@ ENV MYSQL_USER=$MYSQL_USER
 ENV MYSQL_PASSWORD=$MYSQL_PASSWORD
 ENV MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD
 
-COPY data.sql /docker-entrypoint-initdb.d/data.sql
+COPY dump/data.sql /docker-entrypoint-initdb.d/data.sql
 
 EXPOSE 3306
