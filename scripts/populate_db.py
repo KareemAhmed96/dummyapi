@@ -37,15 +37,15 @@ users_response = requests.get(
 if users_response.status_code == 200:
     users = users_response.json()["data"]
     for user in users:
-				"""
-				Fetches a single user's data from the external API.
+		"""
+		Fetches a single user's data from the external API.
 
-				Parameters:
-				- Query: user_id (string)
+		Parameters:
+		- Query: user_id (string)
 
-				Returns:
-				- A user object in JSON format
-				"""
+		Returns:
+		- A user object in JSON format
+		"""
         single_user_response = requests.get(
             base_url+'/user/'+user["id"],
             params=params,
